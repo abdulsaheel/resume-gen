@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import logoSrc from "public/logo.svg";
+import clglogo from "public/clglogo.png"
 import { cx } from "lib/cx";
 
 export const TopNavBar = () => {
@@ -19,21 +20,34 @@ export const TopNavBar = () => {
     >
       <div className="flex h-10 w-full items-center justify-between">
         <Link href="/">
-          <span className="sr-only">OpenResume</span>
+          <span className="sr-only">Digi Vyaapar Resume Builder</span>
           <Image
             src={logoSrc}
             alt="OpenResume Logo"
-            className="h-8 w-full"
+            className="h-10 w-full"
             priority
           />
+          
         </Link>
+        <Link href="https://mrec.ac.in" target="_blank">
+          <span className="sr-only">Malla Reddy Engineering Colllege</span>
+          <Image
+            src={clglogo}
+            alt="OpenResume Logo"
+            className="h-10 w-full"
+            priority
+          />
+          
+        </Link>
+        
         <nav
           aria-label="Site Nav Bar"
           className="flex items-center gap-2 text-sm font-medium"
         >
           {[
-            ["/resume-builder", "Builder"],
-            ["/resume-parser", "Parser"],
+            ["http://127.0.0.1:5000/", "Portfolio Builder"],
+            ["/resume-builder", "Resume Builder"],
+            ["/resume-parser", "Resume Parser"],
           ].map(([href, text]) => (
             <Link
               key={text}
@@ -43,15 +57,7 @@ export const TopNavBar = () => {
               {text}
             </Link>
           ))}
-          <div className="ml-1 mt-1">
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=xitanggg&repo=open-resume&type=star&count=true"
-              width="100"
-              height="20"
-              className="overflow-hidden border-none"
-              title="GitHub"
-            />
-          </div>
+
         </nav>
       </div>
     </header>
