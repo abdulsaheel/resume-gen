@@ -3,8 +3,18 @@ import { getHasUsedAppBefore } from "lib/redux/local-storage";
 import { ResumeDropzone } from "components/ResumeDropzone";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
+import { isLoggedIn } from '../components/documentation/utils/auth';
 
 export default function ImportResume() {
+  const router = useRouter();
+
+  // Check if user is not logged in, redirect to login page
+  if (!isLoggedIn()) {
+    router.push('/login');
+    console.log("User isn't logged in")
+    return null; // You can also show a loading spinner or other UI while redirecting
+  }
   const [hasUsedAppBefore, setHasUsedAppBefore] = useState(false);
   const [hasAddedResume, setHasAddedResume] = useState(false);
   const onFileUrlChange = (fileUrl: string) => {

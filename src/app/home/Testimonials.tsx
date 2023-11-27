@@ -12,22 +12,22 @@ const TESTIMONIALS = [
     src: testimonialSpiegelSrc,
     quote:
       "Students often make silly mistakes on their resume by using inconsistent bullet points or font sizes. Portfolio Builder’s auto format feature is a great help to ensure consistent format.",
-    name: "Ms. Spiegel",
-    title: "Educator",
+    name: "	Dr Shivaprasad Satla",
+    title: "Head Of Department - Computer Science and Engineering (DS), MREC.",
   },
   {
-    src: testimonialSantiSrc,
+    src: testimonialSpiegelSrc,
     quote:
-      "I used Portfolio Builder during my last job search and was invited to interview at top tech companies such as Google and Amazon thanks to its slick yet professional resume design.",
-    name: "Santi",
-    title: "Software Engineer",
+      "Students often make silly mistakes on their resume by using inconsistent bullet points or font sizes. Portfolio Builder’s auto format feature is a great help to ensure consistent format.",
+    name: "	Dr Shivaprasad Satla",
+    title: "Head Of Department - Computer Science and Engineering (DS), MREC.",
   },
   {
     src: testimonialVivianSrc,
     quote:
-      "Creating a professional resume on Portfolio Builder is so smooth and easy! It saves me so much time and headache to not deal with google doc template.",
-    name: "Vivian",
-    title: "College Student",
+      "Creating a professional resume on Portfolio Builder is so smooth and easy! It saves me so much time and headache to not deal with unwatned nuisance",
+    name: "Baddula Nithish",
+    title: "MREC College Student",
   },
 ];
 

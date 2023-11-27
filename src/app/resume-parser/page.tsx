@@ -11,7 +11,8 @@ import { Heading, Link, Paragraph } from "components/documentation";
 import { ResumeTable } from "resume-parser/ResumeTable";
 import { FlexboxSpacer } from "components/FlexboxSpacer";
 import { ResumeParserAlgorithmArticle } from "resume-parser/ResumeParserAlgorithmArticle";
-
+import { useRouter } from 'next/navigation';
+import { isLoggedIn } from '../components/documentation/utils/auth';
 const RESUME_EXAMPLES = [
   {
     fileUrl: "resume-example/laverne-resume.pdf",
@@ -37,6 +38,14 @@ const RESUME_EXAMPLES = [
 
 const defaultFileUrl = RESUME_EXAMPLES[0]["fileUrl"];
 export default function ResumeParser() {
+  const router = useRouter();
+
+  // Check if user is not logged in, redirect to login page
+  if (!isLoggedIn()) {
+    router.push('/login');
+    console.log("User isn't logged in")
+    return null; // You can also show a loading spinner or other UI while redirecting
+  }
   const [fileUrl, setFileUrl] = useState(defaultFileUrl);
   const [textItems, setTextItems] = useState<TextItems>([]);
   const lines = groupTextItemsIntoLines(textItems || []);

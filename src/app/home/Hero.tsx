@@ -19,7 +19,7 @@ export const Hero = () => {
           Create Resume <span aria-hidden="true">→</span>
         </Link>
         <br />
-        <Link href="http://localhost:5000" className="btn-primary mt-6 lg:mt-14">
+        <Link href="https://portfoliobuilder.zc.al" className="btn-primary mt-6 lg:mt-14">
           Create Portfolio<span aria-hidden="true">→</span>
         </Link>
         <p className="ml-6 mt-3 text-sm text-gray-600">Made by <Link href="https://digivyaapar.zc.al" target="_blank" className="underline underline-offset-2">
