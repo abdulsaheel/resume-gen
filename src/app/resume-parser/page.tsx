@@ -40,12 +40,13 @@ const defaultFileUrl = RESUME_EXAMPLES[0]["fileUrl"];
 export default function ResumeParser() {
   const router = useRouter();
 
-  // Check if user is not logged in, redirect to login page
-  if (!isLoggedIn()) {
-    router.push('/login');
-    console.log("User isn't logged in")
-    return null; // You can also show a loading spinner or other UI while redirecting
-  }
+  useEffect(() => {
+    // Check if user is not logged in, redirect to login page
+    if (!isLoggedIn()) {
+      router.push('/login');
+      console.log("User isn't logged in")
+    }
+  }, []);
   const [fileUrl, setFileUrl] = useState(defaultFileUrl);
   const [textItems, setTextItems] = useState<TextItems>([]);
   const lines = groupTextItemsIntoLines(textItems || []);
