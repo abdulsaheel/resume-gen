@@ -6,7 +6,7 @@ import axios from 'axios';
 import { setCookie } from 'nookies';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
 
-const YOUR_BACKEND_API_URL = 'http://127.0.0.1:5000';
+const YOUR_BACKEND_API_URL = 'https://portfoliobuilder.zc.al';
 
 const Login = () => {
   const router = useRouter();
