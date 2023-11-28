@@ -9,15 +9,14 @@ import { isLoggedIn } from '../components/documentation/utils/auth';
 export default function ImportResume() {
   const router = useRouter();
 
-  // Check if user is not logged in, redirect to login page
   useEffect(() => {
-    // Check if user is not logged in, redirect to login page
-    if (!isLoggedIn()) {
-      router.push('/login');
-      console.log("User isn't logged in")
-    }
-  }, []);
   
+      // Check if user is not logged in, redirect to login page
+      if (!isLoggedIn()) {
+        router.push('/login');
+        console.log("User isn't logged in")
+      }
+    }, []);
   const [hasUsedAppBefore, setHasUsedAppBefore] = useState(false);
   const [hasAddedResume, setHasAddedResume] = useState(false);
   const onFileUrlChange = (fileUrl: string) => {

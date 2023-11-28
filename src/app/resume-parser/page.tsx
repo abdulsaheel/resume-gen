@@ -41,6 +41,7 @@ export default function ResumeParser() {
   const router = useRouter();
 
   useEffect(() => {
+
     // Check if user is not logged in, redirect to login page
     if (!isLoggedIn()) {
       router.push('/login');
